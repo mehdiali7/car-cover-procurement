@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Car Cover</title>
+    <link rel="stylesheet" href="customer.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <button class="back-button" onclick="window.history.back()">Back to Products</button>
+
+        <!-- Product Detail Section -->
+        <div id="product1" class="product-detail">
+            <h1>Motor Trend SafeKeeper All-Weather Car Cover</h1>
+
+            <div class="product-image-detail">
+                <img src="https://via.placeholder.com/480x320?text=Car+Cover+1" alt="Car Cover 1">
+            </div>
+
+            <div class="product-details">
+                <p>The Motor Trend SafeKeeper Car Cover offers reliable, all-weather protection for your vehicle. It's made of durable, multi-layer material that protects against rain, snow, UV rays, and dirt.</p>
+                <ul>
+                    <li>Waterproof 6-layer design for optimal weather protection.</li>
+                    <li>Scratch-proof inner lining.</li>
+                    <li>Breathable fabric to reduce moisture buildup.</li>
+                    <li>Fits sedans up to 210 inches in length.</li>
+                </ul>
+            </div>
+
+            <div class="add-to-cart">
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="similar-items">
+                <h2>Similar Products</h2>
+                <div class="similar-product">
+                    <img src="https://via.placeholder.com/280x180?text=Car+Cover+Similar+1" alt="Similar Car Cover 1">
+                    <p>Similar Car Cover 1</p>
+                </div>
+                <div class="similar-product">
+                    <img src="https://via.placeholder.com/280x180?text=Car+Cover+Similar+2" alt="Similar Car Cover 2">
+                    <p>Similar Car Cover 2</p>
+                </div>
+            </div>
+
+            <div class="reviews">
+                <h3>Customer Reviews</h3>
+                <p>★★★★★ - Excellent cover, keeps my car safe in all weather conditions!</p>
+                <p>★★★★☆ - Good quality but a bit tight for my sedan.</p>
+                <p>★★★★★ - Perfect for winter! Keeps snow and rain off my car.</p>
+                <p>★★★★☆ - Very good cover, but the elastic at the bottom could be stronger.</p>
+                <p>★★★★★ - Highly recommend it for anyone looking for great protection against the sun and rain.</p>
+            </div>
+        </div>
+
+        <div id="product2" class="product-detail" style="display:none;">
+            <h1>Premium Car Cover</h1>
+            <div class="product-image-detail">
+                <img src="https://via.placeholder.com/480x320?text=Car+Cover+2" alt="Car Cover 2">
+            </div>
+            <div class="product-details">
+                <p>This Premium Car Cover provides top-notch protection for your car with a focus on durability and high-quality materials.</p>
+                <ul>
+                    <li>Waterproof and breathable fabric for perfect weather protection.</li>
+                    <li>Scratch-free inner lining to keep your car’s paint intact.</li>
+                    <li>Fits vehicles up to 220 inches in length.</li>
+                </ul>
+            </div>
+            <div class="add-to-cart">
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="reviews">
+                <h3>Customer Reviews</h3>
+                <p>★★★★★ - I love how breathable it is. My car stays dry even after a heavy downpour!</p>
+                <p>★★★★☆ - Fits well, but I wish it had more reflective strips for better visibility.</p>
+                <p>★★★★★ - The material is really tough and durable. Great value for money!</p>
+                <p>★★★☆☆ - Not as easy to put on as I thought, but the protection is great.</p>
+                <p>★★★★☆ - Solid product, but a bit too heavy for one person to handle alone.</p>
+            </div>
+        </div>
+
+        <div id="product3" class="product-detail" style="display:none;">
+            <h1>All-Season Car Cover</h1>
+            <div class="product-image-detail">
+                <img src="https://via.placeholder.com/480x320?text=Car+Cover+3" alt="Car Cover 3">
+            </div>
+            <div class="product-details">
+                <p>This All-Season Cover is designed to withstand the elements year-round, offering protection from snow, rain, and UV rays.</p>
+                <ul>
+                    <li>Multi-layer construction for maximum durability.</li>
+                    <li>Breathable design to reduce moisture buildup.</li>
+                    <li>Ideal for any car up to 210 inches long.</li>
+                </ul>
+            </div>
+            <div class="add-to-cart">
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="reviews">
+                <h3>Customer Reviews</h3>
+                <p>★★★★★ - I've used this cover for two seasons and it has held up really well!</p>
+                <p>★★★★☆ - Very effective at keeping my car clean and dry, but it's a little bulky.</p>
+                <p>★★★★☆ - Excellent all-season protection. My car stays spotless even in the rain.</p>
+                <p>★★★★★ - Best investment for my car. Very durable and keeps it safe from all elements.</p>
+                <p>★★★☆☆ - The cover is good but it could fit a bit better on the corners.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Function to display product details based on URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('product');
+
+        if (productId) {
+            document.querySelectorAll('.product-detail').forEach(function(page) {
+                page.style.display = 'none';
+            });
+            document.getElementById('product' + productId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
