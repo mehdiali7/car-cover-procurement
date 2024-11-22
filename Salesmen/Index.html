@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Home - Car Cover Procurement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">CarCoverProcurement</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#" class="cta-button" onclick="openLoginModal()">Login</a>
+            <a href="#" onclick="openRegisterModal()">Register</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Car Cover Procurement</h1>
+            <p>Your one-stop solution for high-quality car and bike covers. Join us and start selling your premium products today!</p>
+            <button onclick="openRegisterModal()">Start Selling</button>
+        </div>
+    </section>
+
+   <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <h3>Quality Assurance</h3>
+                <p>We ensure all our covers are made from top-grade materials to provide the best protection for vehicles.</p>
+            </div>
+            <div class="benefit">
+                <h3>Easy Management</h3>
+                <p>Our platform allows you to easily manage your inventory and track your sales.</p>
+            </div>
+            <div class="benefit">
+                <h3>Reach More Customers</h3>
+                <p>Get exposure to a wide range of customers who trust Car Cover Procurement for their needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+<section class="how-it-works">
+    <h2>How It Works</h2>
+
+    <!-- Step 1 -->
+    <div class="step">
+        <div class="step-text">
+            <h3>Step 1: Register as a Seller</h3>
+            <p>Create an account to start selling your products on our platform. Signing up is quick and easy, and it gives you access to a variety of tools to help you manage and grow your online business. Simply provide your store details, contact information, and verify your email. Once registered, you’ll join a community of sellers dedicated to providing quality products and excellent customer service.</p>
+        </div>
+        <div class="step-image">
+            <img src="register.png" alt="Register as a Seller">
+        </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step reverse">
+        <div class="step-image">
+            <img src="add-product.png" alt="Add Product">
+        </div>
+        <div class="step-text">
+            <h3>Step 2: Add Your Product Listings</h3>
+            <p>Upload your products with detailed descriptions, high-quality images, and competitive prices to attract more buyers. Our platform allows you to easily categorize your products, set pricing, and provide any additional details like materials, colors, or dimensions. Each product listing can be customized to reflect your brand, helping potential buyers understand why your products stand out. Effective listings can greatly enhance visibility and boost your sales.</p>
+        </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step">
+        <div class="step-text">
+            <h3>Step 3: Start Selling and Managing Inventory</h3>
+            <p>Once your products are live, you can start receiving orders and growing your business. Our user-friendly dashboard provides real-time insights into your inventory, sales, and customer interactions. Easily manage your stock levels, track sales performance, and analyze customer feedback to improve your offerings. The dashboard also helps you monitor order fulfillment and provides quick access to customer service tools, ensuring a smooth and professional selling experience.</p>
+        </div>
+        <div class="step-image">
+            <img src="dashboard.png" alt="Manage Inventory">
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 CarCoverProcurement. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Seller Login</h2>
+            <form onsubmit="event.preventDefault(); redirectToDashboard();">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+<br>
+            <p class="switch-form">Don't have an account? <a href="#" onclick="switchToRegister()">Register here</a></p>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">&times;</span>
+            <h2>Seller Registration</h2>
+            <form onsubmit="event.preventDefault(); redirectToDashboard();">
+                <label for="name">Store Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your store name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                
+                <button type="submit">Register</button>
+            </form>
+<br>
+            <p class="switch-form">Already have an account? <a href="#" onclick="switchToLogin()">Login here</a></p>
+        </div>
+    </div>
+
+    <!-- JavaScript for modals and redirection -->
+    <script>
+        function openLoginModal() {
+            document.getElementById("loginModal").style.display = "block";
+        }
+
+        function closeLoginModal() {
+            document.getElementById("loginModal").style.display = "none";
+        }
+
+        function openRegisterModal() {
+            document.getElementById("registerModal").style.display = "block";
+        }
+
+        function closeRegisterModal() {
+            document.getElementById("registerModal").style.display = "none";
+        }
+
+        function redirectToDashboard() {
+            window.location.href = "dashboard.html";
+        }
+
+        // Switch from Login to Register Modal
+        function switchToRegister() {
+            closeLoginModal();
+            openRegisterModal();
+        }
+
+        // Switch from Register to Login Modal
+        function switchToLogin() {
+            closeRegisterModal();
+            openLoginModal();
+        }
+    </script>
+</body>
+</html>

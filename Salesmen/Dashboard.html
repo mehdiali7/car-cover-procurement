@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesman Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="dashboard-header">
+        <div class="header-left">
+         
+            <h1>CarCoverProcurement</h1>
+        </div>
+        <button class="logout-button" onclick="confirmLogout()">Logout</button>
+    </header>
+
+    <!-- Main Dashboard Section -->
+    <div class="dashboard-container">
+        <h1>Salesman Dashboard</h1>
+        
+        <!-- Inventory Management Section -->
+        <section class="inventory-management">
+            <h2>Inventory Management</h2>
+            <button class="add-product-btn" onclick="openAddProductModal()">Add New Product</button>
+            <div class="table-container">
+                <table>
+    <thead>
+        <tr>
+            <th>Cover Image</th>
+            <th>Product Name</th>
+            <th>Price (PKR)</th>
+            <th>Stock Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <img src="car-cover-1.jpg" alt="Standard Car Cover" class="cover-image">
+            </td>
+            <td>Standard Car Cover</td>
+            <td>500</td>
+            <td>
+                <label class="toggle-switch">
+                    <input type="checkbox" onchange="toggleStockStatus(this)" checked>
+                    <span class="slider"></span>
+                </label>
+                <span class="stock-status">In Stock</span>
+            </td>
+            <td>
+                <button class="edit-btn" onclick="openEditProductModal('Standard Car Cover', 500, 'in-stock', 'Brand A', 'Medium', 'car-cover')">Edit</button>
+                <button class="delete-btn" onclick="confirmDelete()">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="car-cover-1.jpg" alt="Premium Car Cover" class="cover-image">
+            </td>
+            <td>Premium Car Cover</td>
+            <td>750</td>
+            <td>
+                <label class="toggle-switch">
+                    <input type="checkbox" onchange="toggleStockStatus(this)">
+                    <span class="slider"></span>
+                </label>
+                <span class="stock-status">Out of Stock</span>
+            </td>
+            <td>
+                <button class="edit-btn" onclick="openEditProductModal('Premium Car Cover', 750, 'out-of-stock', 'Brand B', 'Large', 'car-cover')">Edit</button>
+                <button class="delete-btn" onclick="confirmDelete()">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Add/Edit Product Modal -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProductModal()">&times;</span>
+        <h2 id="modalTitle">Add New Product</h2>
+        <form id="productForm">
+            <label for="product-name">Product Name</label>
+            <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required>
+
+            <label for="brand-name">Brand Name</label>
+            <input type="text" id="brand-name" name="brand-name" placeholder="Enter brand name" required>
+
+            <label for="cover-size">Cover Size</label>
+            <input type="text" id="cover-size" name="cover-size" placeholder="Enter cover size (e.g., Medium, Large)" required>
+
+            <label for="type-of-cover">Type of Cover</label>
+            <select id="type-of-cover" name="type-of-cover" required>
+                <option value="" disabled selected>Select Type</option>
+                <option value="car-cover">Car Cover</option>
+                <option value="bike-cover">Bike Cover</option>
+            </select>
+
+            <label for="price">Price (PKR)</label>
+            <input type="number" id="price" name="price" placeholder="Enter price in PKR" required>
+
+            <label for="stock-status">Stock Status</label>
+            <select id="stock-status" name="stock-status">
+                <option value="in-stock">In Stock</option>
+                <option value="out-of-stock">Out of Stock</option>
+            </select>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Enter product description" rows="4" required></textarea>
+
+            <label for="upload-image">Upload Image</label>
+            <input type="file" id="upload-image" name="upload-image" required>
+
+            <button type="submit" id="submitButton">Add Product</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- JavaScript -->
+    <script src="dashboard.js"></script>
+</body>
+</html>

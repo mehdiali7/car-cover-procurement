@@ -1,0 +1,304 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5; /* Default line-height for general body */
+}
+
+p {
+    line-height: 24px; /* Specific line-height for all paragraphs */
+    color: #555; /* Optional: Adjust text color for readability */
+    margin-bottom: 1rem; /* Add some spacing after paragraphs */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header nav a {
+    margin-left: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header nav .cta-button {
+    background-color: #ff9800;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.header nav .cta-button:hover {
+    background-color: #e68900;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero button {
+    padding: 0.8rem 2rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #555;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 3rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.benefit {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefit h3 {
+    font-size: 1.3rem;
+    color: #ff9800;
+    margin-bottom: 0.5rem;
+}
+
+.benefit p {
+    color: #555;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 3rem 2rem;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.step.reverse {
+    flex-direction: row-reverse !important; /* Ensure flex-direction is applied */
+}
+
+.step-text {
+    flex: 1;
+    padding: 1rem;
+    text-align: left;
+}
+
+.step-text h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.step-text p {
+    color: #555;
+}
+
+.step-image {
+    flex: 1;
+    padding: 1rem;
+}
+
+.step-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 4px solid #ff9800; /* Yellow outline */
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 1rem;
+}
+
+.footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer .footer-links a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer .footer-links a:hover {
+    color: #e68900;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer .social-icons a {
+    color: #ff9800;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.footer .social-icons a:hover {
+    color: #e68900;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+/* Form Styling Inside Modal */
+.modal-content h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    font-weight: bold;
+    color: #333;
+    margin-top: 1rem;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.modal-content button[type="submit"] {
+    padding: 0.8rem;
+    margin-top: 1.5rem;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #e68900;
+}
