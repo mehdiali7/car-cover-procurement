@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Product Details</h1>
+  </header>
+
+  <main>
+    <section class="product-details">
+      <img src="car-cover1.jpg" alt="Car Cover 1" class="product-image">
+      <div class="product-info">
+        <h2>Car Cover 1</h2>
+        <p><strong>Material:</strong> Waterproof Polyester</p>
+        <p><strong>Compatibility:</strong> Sedans</p>
+        <p><strong>Price:</strong> $50</p>
+        <p>
+          This car cover is made from high-quality waterproof polyester to protect your car in all weather conditions.
+        </p>
+        <button class="orange-btn" onclick="addToCart(1, 'Car Cover 1', 50)">Add to Cart</button>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <h3>Customer Reviews</h3>
+      <p>⭐⭐⭐⭐☆ - "Great quality and fits perfectly!"</p>
+      <p>⭐⭐⭐⭐⭐ - "Highly recommended for sedan owners."</p>
+    </section>
+  </main>
+
+  <!-- View Cart Button -->
+  <a href="cart.html" class="view-cart-btn">View Cart</a>
+
+  <footer>
+    <p>&copy; 2024 Car Cover Procurement System</p>
+  </footer>
+
+  <script>
+    // Add to cart functionality
+    function addToCart() {
+      const product = {
+        name: 'Car Cover Model XYZ',
+        price: 50.00,
+        quantity: 1,
+        image: 'car-cover.jpg',
+      };
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Update cart total on Add to Cart
+      updateCartTotal();
+    }
+
+    function updateCartTotal() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price * item.quantity;
+      });
+      localStorage.setItem('cartTotal', total.toFixed(2));
+    }
+  </script>
+
+  <style>
+    /* View Cart Button Styling */
+    .view-cart-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: orange;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .view-cart-btn:hover {
+      background-color: darkorange;
+    }
+  </style>
+</body>
+</html>
