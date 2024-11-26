@@ -46,37 +46,52 @@ header nav ul li a:hover {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 5em 1em; /* Increased padding for more space */
-    background-image: url('cc.jpg'); /* Set the background image */
-    background-position: center center; /* Center the image */
-    background-size: cover; /* Make the image cover the entire hero section */
-    background-repeat: no-repeat; /* Prevent image repetition */
-    height: 100vh; /* Full viewport height */
+    padding: 5em 1em;
+    background-image: url('cc.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
     color: #000000;
+    position: relative;
+}
+
+.hero-text-box {
+    background-color: rgba(255, 255, 255, 0.7); /* White with transparency */
+    padding: 2em 1em;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the box vertically and horizontally */
+    text-align: center;
+    z-index: 1; /* Ensure it's above other content */
 }
 
 .hero h1 {
-    font-size: 3em; /* Larger font size */
-    margin-bottom: 1em; /* Increased space below */
+    font-size: 3em;
+    margin-bottom: 1em;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px; /* Added letter spacing for more style */
+    letter-spacing: 2px;
 }
 
 .hero p {
-    font-size: 1.4em; /* Slightly larger description text */
-    margin-bottom: 2em; /* Increased space below */
-    font-weight: 300; /* Lighter weight for the description */
-    line-height: 1.8; /* More line height for readability */
-    max-width: 700px; /* Limit width for better readability */
+    font-size: 1.4em;
+    margin-bottom: 2em;
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 700px;
     margin-left: auto;
-    margin-right: auto; /* Center the paragraph */
+    margin-right: auto;
 }
 
 .hero .cta-buttons {
     display: flex;
     justify-content: center;
-    gap: 2em; /* Added space between buttons */
+    gap: 2em;
 }
 
 .hero .cta-buttons a {
@@ -89,13 +104,14 @@ header nav ul li a:hover {
     font-size: 1.2em;
     border-radius: 5px;
     transition: background-color 0.3s;
-    text-transform: uppercase; /* Uppercase letters for buttons */
+    text-transform: uppercase;
 }
 
 .hero .cta-buttons a:hover {
     background-color: #d48800;
-    transform: translateY(-3px); /* Slight hover effect */
+    transform: translateY(-3px);
 }
+
 
 
 
