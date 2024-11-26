@@ -7,114 +7,94 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>Car Cover Procurement System</h1>
+    <div class="logo">CarCoverProcurement</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact & Support</a></li>
+            <li><a href="#login">Login/Register</a></li>
+        </ul>
+    </nav>
   </header>
 
   <main>
-    <section class="product-grid">
-      <!-- Product Card Example -->
-      <div class="product-card">
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <span>Filter Products</span>
+      <label for="material">Material:</label>
+      <select id="material">
+        <option value="all">All</option>
+        <option value="Waterproof">Waterproof</option>
+        <option value="Breathable">Breathable</option>
+      </select>
+      <label for="compatibility">Compatibility:</label>
+      <select id="compatibility">
+        <option value="all">All</option>
+        <option value="Sedans">Sedans</option>
+        <option value="SUVs">SUVs</option>
+      </select>
+      <button class="apply-filter" onclick="applyFilter()">Apply Filter</button>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="product-grid" id="product-grid">
+      <!-- Static Product Cards -->
+      <div class="product-card" data-material="Waterproof" data-compatibility="Sedans">
         <img src="car-cover1.jpg" alt="Car Cover 1">
         <h3>Car Cover 1</h3>
-        <p>Material: Waterproof Polyester</p>
+        <p>Material: Waterproof</p>
         <p>Compatible with: Sedans</p>
-        <p>Rating: ⭐⭐⭐⭐☆</p>
         <p>Price: $50</p>
         <a href="product.html?id=1" class="orange-btn">View Details</a>
       </div>
-
-      <div class="product-card">
+      <div class="product-card" data-material="Breathable" data-compatibility="SUVs">
         <img src="car-cover2.jpg" alt="Car Cover 2">
         <h3>Car Cover 2</h3>
-        <p>Material: Breathable Fabric</p>
+        <p>Material: Breathable</p>
         <p>Compatible with: SUVs</p>
-        <p>Rating: ⭐⭐⭐⭐⭐</p>
         <p>Price: $60</p>
         <a href="product.html?id=2" class="orange-btn">View Details</a>
       </div>
-      <div class="product-card">
-        <img src="car-cover1.jpg" alt="Car Cover 1">
-        <h3>Car Cover 1</h3>
-        <p>Material: Waterproof Polyester</p>
+      <div class="product-card" data-material="Waterproof" data-compatibility="SUVs">
+        <img src="car-cover3.jpg" alt="Car Cover 3">
+        <h3>Car Cover 3</h3>
+        <p>Material: Waterproof</p>
+        <p>Compatible with: SUVs</p>
+        <p>Price: $55</p>
+        <a href="product.html?id=3" class="orange-btn">View Details</a>
+      </div>
+      <div class="product-card" data-material="Breathable" data-compatibility="Sedans">
+        <img src="car-cover4.jpg" alt="Car Cover 4">
+        <h3>Car Cover 4</h3>
+        <p>Material: Breathable</p>
         <p>Compatible with: Sedans</p>
-        <p>Rating: ⭐⭐⭐⭐☆</p>
-        <p>Price: $50</p>
-        <a href="product.html?id=1" class="orange-btn">View Details</a>
+        <p>Price: $45</p>
+        <a href="product.html?id=4" class="orange-btn">View Details</a>
       </div>
-
-      <div class="product-card">
-        <img src="car-cover2.jpg" alt="Car Cover 2">
-        <h3>Car Cover 2</h3>
-        <p>Material: Breathable Fabric</p>
-        <p>Compatible with: SUVs</p>
-        <p>Rating: ⭐⭐⭐⭐⭐</p>
-        <p>Price: $60</p>
-        <a href="product.html?id=2" class="orange-btn">View Details</a>
-      </div>
-      <div class="product-card">
-        <img src="car-cover1.jpg" alt="Car Cover 1">
-        <h3>Car Cover 1</h3>
-        <p>Material: Waterproof Polyester</p>
-        <p>Compatible with: Sedans</p>
-        <p>Rating: ⭐⭐⭐⭐☆</p>
-        <p>Price: $50</p>
-        <a href="product.html?id=1" class="orange-btn">View Details</a>
-      </div>
-
-      <div class="product-card">
-        <img src="car-cover2.jpg" alt="Car Cover 2">
-        <h3>Car Cover 2</h3>
-        <p>Material: Breathable Fabric</p>
-        <p>Compatible with: SUVs</p>
-        <p>Rating: ⭐⭐⭐⭐⭐</p>
-        <p>Price: $60</p>
-        <a href="product.html?id=2" class="orange-btn">View Details</a>
-      </div>
-      <div class="product-card">
-        <img src="car-cover1.jpg" alt="Car Cover 1">
-        <h3>Car Cover 1</h3>
-        <p>Material: Waterproof Polyester</p>
-        <p>Compatible with: Sedans</p>
-        <p>Rating: ⭐⭐⭐⭐☆</p>
-        <p>Price: $50</p>
-        <a href="product.html?id=1" class="orange-btn">View Details</a>
-      </div>
-
-      <div class="product-card">
-        <img src="car-cover2.jpg" alt="Car Cover 2">
-        <h3>Car Cover 2</h3>
-        <p>Material: Breathable Fabric</p>
-        <p>Compatible with: SUVs</p>
-        <p>Rating: ⭐⭐⭐⭐⭐</p>
-        <p>Price: $60</p>
-        <a href="product.html?id=2" class="orange-btn">View Details</a>
-      </div>
-      <div class="product-card">
-        <img src="car-cover1.jpg" alt="Car Cover 1">
-        <h3>Car Cover 1</h3>
-        <p>Material: Waterproof Polyester</p>
-        <p>Compatible with: Sedans</p>
-        <p>Rating: ⭐⭐⭐⭐☆</p>
-        <p>Price: $50</p>
-        <a href="product.html?id=1" class="orange-btn">View Details</a>
-      </div>
-
-      <div class="product-card">
-        <img src="car-cover2.jpg" alt="Car Cover 2">
-        <h3>Car Cover 2</h3>
-        <p>Material: Breathable Fabric</p>
-        <p>Compatible with: SUVs</p>
-        <p>Rating: ⭐⭐⭐⭐⭐</p>
-        <p>Price: $60</p>
-        <a href="product.html?id=2" class="orange-btn">View Details</a>
-      </div>
-
+      <!-- More products... -->
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Car Cover Procurement System</p>
+    <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <div class="social-icons">
+        <a href="#" class="fab fa-facebook"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+    </div>
+    <p class="copyright">&copy; 2024 Car Cover Procurement. All Rights Reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
