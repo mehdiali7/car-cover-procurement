@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Admin Panel - CarCoverProcurement</div>
+        <nav>
+            <ul>
+                <li><a href="#dashboard" class="active">Dashboard</a></li>
+                <li><a href="#manage-salesmen">Manage Salesmen</a></li>
+                <li><a href="#approve-products">Approve Products</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Dashboard Section -->
+    <main class="admin-dashboard">
+        <section id="dashboard" class="dashboard-overview">
+            <h2>Admin Dashboard</h2>
+            <div class="overview-cards">
+                <div class="card">
+                    <h3>Total Salesmen</h3>
+                    <p>45</p>
+                </div>
+                <div class="card">
+                    <h3>Total Products</h3>
+                    <p>120</p>
+                </div>
+                <div class="card">
+                    <h3>Approved Products</h3>
+                    <p>95</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manage Salesmen -->
+        <section id="manage-salesmen" class="manage-section">
+            <h2>Manage Salesmen</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Salesman ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>Active</td>
+                        <td>
+                            <button class="btn-small danger">Suspend</button>
+                            <button class="btn-small">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Approve Products -->
+        <section id="approve-products" class="manage-section">
+            <h2>Approve Products</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Name</th>
+                        <th>Supplier</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CAR123</td>
+                        <td>Luxury Car Cover</td>
+                        <td>John Doe</td>
+                        <td>Pending Approval</td>
+                        <td>
+                            <button class="btn-small success">Approve</button>
+                            <button class="btn-small danger">Reject</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Car Cover Procurement System. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
