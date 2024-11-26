@@ -1,90 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Details</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="pstyles.css">
 </head>
 <body>
-  <header>
-    <h1>Product Details</h1>
-  </header>
 
-  <main>
-    <section class="product-details">
-      <img src="car-cover1.jpg" alt="Car Cover 1" class="product-image">
-      <div class="product-info">
-        <h2>Car Cover 1</h2>
-        <p><strong>Material:</strong> Waterproof Polyester</p>
-        <p><strong>Compatibility:</strong> Sedans</p>
-        <p><strong>Price:</strong> $50</p>
-        <p>
-          This car cover is made from high-quality waterproof polyester to protect your car in all weather conditions.
-        </p>
-        <button class="orange-btn" onclick="addToCart(1, 'Car Cover 1', 50)">Add to Cart</button>
-      </div>
+    <!-- Header -->
+    <header>
+        <div class="logo">CarCoverProcurement</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact & Support</a></li>
+                <li><a href="#login">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Product Information Section -->
+    <section id="product-info" class="product-info">
+        <div class="product-header">
+            <h2>Premium Car Cover for Your Vehicle</h2>
+        </div>
+        <div class="product-details">
+            <div class="image">
+                <img src="car-cover.jpg" alt="Car Cover">
+            </div>
+            <div class="info-box">
+                <div class="description">
+                    <h3>Product Description</h3>
+                    <p>High-quality, weather-resistant car cover designed to protect your car in any condition. Tailored fit for your vehicle.</p>
+                    <div class="material">
+                        <p><strong>Material:</strong> Waterproof Polyester</p>
+                    </div>
+                    <div class="compatibility">
+                        <p><strong>Compatibility:</strong> Sedans</p>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <h3>Quantity</h3>
+                    <input type="number" id="quantity" value="1" min="1" oninput="updatePrice()">
+                </div>
+                <div class="total">
+                    <h3>Total</h3>
+                    <p id="total-price">$99.99</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#buy-now" class="btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="reviews">
-      <h3>Customer Reviews</h3>
-      <p>⭐⭐⭐⭐☆ - "Great quality and fits perfectly!"</p>
-      <p>⭐⭐⭐⭐⭐ - "Highly recommended for sedan owners."</p>
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="reviews">
+        <h3>Customer Reviews</h3>
+        <div class="review">
+            <p class="review-text">"This car cover is amazing! It fits perfectly and keeps my car protected from the rain. Highly recommend!"</p>
+            <p class="review-author">- John D.</p>
+        </div>
+        <div class="review">
+            <p class="review-text">"Great quality material. It’s durable and provides great protection against all weather conditions."</p>
+            <p class="review-author">- Sarah P.</p>
+        </div>
+        <div class="review">
+            <p class="review-text">"I’ve tried a few other covers, but this one is by far the best. Easy to put on and take off!"</p>
+            <p class="review-author">- Mike W.</p>
+        </div>
     </section>
-  </main>
 
-  <!-- View Cart Button -->
-  <a href="cart.html" class="view-cart-btn">View Cart</a>
+    <!-- Footer Section -->
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+        <p class="copyright">&copy; 2024 Car Cover Procurement. All Rights Reserved.</p>
+    </footer>
 
-  <footer>
-    <p>&copy; 2024 Car Cover Procurement System</p>
-  </footer>
-
-  <script>
-    // Add to cart functionality
-    function addToCart() {
-      const product = {
-        name: 'Car Cover Model XYZ',
-        price: 50.00,
-        quantity: 1,
-        image: 'car-cover.jpg',
-      };
-
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      cart.push(product);
-      localStorage.setItem('cart', JSON.stringify(cart));
-
-      // Update cart total on Add to Cart
-      updateCartTotal();
-    }
-
-    function updateCartTotal() {
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      let total = 0;
-      cart.forEach(item => {
-        total += item.price * item.quantity;
-      });
-      localStorage.setItem('cartTotal', total.toFixed(2));
-    }
-  </script>
-
-  <style>
-    /* View Cart Button Styling */
-    .view-cart-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 10px 20px;
-      background-color: orange;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .view-cart-btn:hover {
-      background-color: darkorange;
-    }
-  </style>
+    <script src="pscripts.js"></script>
 </body>
 </html>
