@@ -1,0 +1,221 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+}
+
+header .logo {
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #f0a500;
+}
+
+/* Product Information Section */
+.product-info {
+    padding: 4em 1em;
+    text-align: center;
+}
+
+.product-header h2 {
+    font-size: 2em;  /* Lowered font size */
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.product-details .image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-details .info-box {
+    background-color: #fff;
+    padding: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    color: #333;
+}
+
+.product-details h3 {
+    color: #f0a500;
+}
+
+.material, .compatibility {
+    margin-top: 1em;
+    font-size: 1.1em;
+}
+
+.material p, .compatibility p {
+    color: #333;
+}
+
+.quantity input {
+    padding: 0.5em;
+    width: 50px;
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+
+.total p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    padding: 0.8em 1.5em;  /* Reduced size of the button */
+    background-color: #f0a500;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.cta-buttons a:hover {
+    background-color: #d48800;
+    transform: translateY(-3px);
+}
+
+/* Customer Reviews Section */
+.reviews {
+    padding: 3em 1em;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.reviews h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.review {
+    margin-bottom: 2em;
+}
+
+.review-text {
+    font-size: 1.1em;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 0.5em;
+}
+
+.review-author {
+    font-size: 1em;
+    font-weight: bold;
+    color: #f0a500;
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 1.5em 1em;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 2px solid #f0a500;
+}
+
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+footer .footer-links li {
+    margin: 0 1em;
+}
+
+footer .footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 0.95em;
+}
+
+footer .footer-links li a:hover {
+    color: #f0a500;
+}
+
+footer .social-icons {
+    margin-top: 1em;
+}
+
+footer .social-icons a {
+    margin: 0 1em;
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #f0a500;
+    transform: scale(1.1);
+}
+
+footer .copyright {
+    margin-top: 1em;
+    font-size: 0.8em;
+    color: #777;
+}
