@@ -7,10 +7,22 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Checkout</h1>
+    <div class="logo">CarCoverProcurement</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact & Support</a></li>
+        <li><a href="#login">Login/Register</a></li>
+      </ul>
+    </nav>
   </header>
 
+  <!-- Main Section -->
   <main>
     <h2 id="billing-header">Billing Details</h2>
 
@@ -23,7 +35,7 @@
 
       <div class="form-row">
         <label for="phone-number">Phone Number:</label>
-        <input type="text" id="phone-number" name="Phone Number" placeholder="Enter your phone number" required>
+        <input type="text" id="phone-number" name="phone-number" placeholder="Enter your phone number" required>
       </div>
       
       <div class="form-row">
@@ -40,11 +52,6 @@
         <label for="postal-code">Postal Code:</label>
         <input type="text" id="postal-code" name="postal-code" placeholder="Enter postal code" required>
       </div>
-
-      <div class="form-row">
-        <label for="nearby-place">Famous Nearby Place:</label>
-        <input type="text" id="nearby-place" name="nearby-place" placeholder="Enter a nearby landmark" required>
-      </div>
     </form>
 
     <!-- Place Order Button -->
@@ -53,31 +60,71 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Car Cover Procurement System</p>
+    <ul class="footer-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <div class="social-icons">
+      <a href="#" class="fab fa-facebook"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="#" class="fab fa-instagram"></a>
+    </div>
+    <p class="copyright">&copy; 2024 Car Cover Procurement. All Rights Reserved.</p>
   </footer>
 
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
     }
 
     header {
-      background-color: #f4f4f4;
-      padding: 15px 20px;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em;
+      background-color: #333;
+      color: #fff;
+    }
+
+    header .logo {
+      font-size: 1.5em;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    header nav ul li {
+      margin: 0 1em;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    header nav ul li a:hover {
+      color: #f0a500;
     }
 
     main {
       padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     #billing-header {
       text-align: center;
       margin-bottom: 20px;
+      color: #f0a500;
     }
 
     #checkout-form {
@@ -110,7 +157,7 @@
 
     .orange-btn {
       padding: 10px 20px;
-      background-color: orange;
+      background-color: #f0a500;
       color: white;
       border: none;
       border-radius: 5px;
@@ -118,15 +165,47 @@
     }
 
     .orange-btn:hover {
-      background-color: darkorange;
+      background-color: #d48800;
     }
 
     footer {
       text-align: center;
       padding: 10px 0;
-      background-color: #f4f4f4;
+      background-color: #333;
+      color: #fff;
       margin-top: 30px;
     }
+
+    footer .footer-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+    }
+
+    footer .footer-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer .footer-links a:hover {
+      color: #f0a500;
+    }
+
+    footer .social-icons {
+      margin: 10px 0;
+    }
+
+    footer .social-icons a {
+      color: #fff;
+      font-size: 1.5em;
+      margin: 0 10px;
+    }
+
+    footer .social-icons a:hover {
+      color: #f0a500;
+    }
   </style>
+
 </body>
 </html>
